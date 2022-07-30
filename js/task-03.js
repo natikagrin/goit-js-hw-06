@@ -16,7 +16,7 @@ const images = [
 const galleryList = document.querySelector("#gallery");
 galleryList.insertAdjacentHTML("afterbegin", galleryMarkup);
 galleryList.setAttribute("style", "list-style-type:none; display: flex;");
-const galleryMarkup = images.map((image) => `<li><img src = "${image.url}"alt ="${image.alt}"/></li>`)
+const galleryMarkup = images.map((image) => `<li><img src = "${image.url}"alt ="${image.alt}"></li>`)
   .join("");
 
 /*const createGallery = ({ url, alt }) =>
