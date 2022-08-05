@@ -7,8 +7,7 @@
     //Всі елементи повинні мати випадковий колір фону у форматі HEX. Використовуй готову функцію getRandomHexColor для отримання кольору
     function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+    .toString(16)}`;
 }
 const root = document.getElementById('root');
 function createBoxes(amount) {
