@@ -17,6 +17,8 @@ function onFormSubmit(evt) {
     for (const element of evt.currentTarget.elements) {
         if (element.name) formData[element.name] = element.value;
     }
+    console.log(formData);
     evt.currentTarget.reset(); 
     }
    
+    

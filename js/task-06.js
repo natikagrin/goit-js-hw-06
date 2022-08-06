@@ -1,19 +1,15 @@
 
-let inputVal = document.getElementById("validation-input");
+let inputVal = document.querySelector('#validation-input');
+let totalLenght = Number(inputVal.dataset.length);
 
-let totalLenght = inputVal.getAttribute("data-length");
-let intTotallenght = parseInt(totalLenght, 10);
 
-inputVal.oninput = function() {
-  if (inputVal.value.length === intTotallenght) {
-    inputVal.classList.remove("invalid");
-    inputVal.classList.add("valid");
-  }
-  if (inputVal.value.length === 0) {
-    inputVal.classList.remove("valid");
-    inputVal.classList.remove("invalid");
-  }
-  if (inputVal.value.length !== intTotallenght && inputVal.value.length !== 0) {
-    inputVal.classList.add("invalid");
-  }
+inputVal.addEventListener('blur', onInputBlur);
+function onInputBlur(event) {
+if(event.currentTarget.value.length === totalLenght) {
+  event.currentTarget.classList.add('valid');
+  event.currentTarget.classList.remove('invalid');
+} else {
+  event.currentTarget.classList.add('invalid');
+  event.currentTarget.classList.remove('valid');
+}
 };
